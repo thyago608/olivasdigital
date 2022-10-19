@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+
+  padding: 0.2rem 0.6rem;
+  background: #f390a8;
+  border-radius: 1rem;
+
+  max-width: 200px;
+
+  font-size: 0.9rem;
+
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

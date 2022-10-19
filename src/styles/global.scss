@@ -1,0 +1,39 @@
+:root {
+  --title: #02374f;
+  --text-primary: #4c4c4c;
+  --text-secundary: #838383;
+  --main-news: #8ecb53;
+
+  --underline: #3fb9ca;
+
+  --empty: #f8f8f8;
+
+  --news-latter: #f0f1f5;
+  --footer: #062d76;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--title);
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
