@@ -8,16 +8,22 @@
   color: #fff;
 
   padding: 0.2rem 0.6rem;
-  background: #f390a8;
   border-radius: 1rem;
 
-  max-width: 200px;
-
+  max-width: max-content;
   font-size: 0.9rem;
 
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  &.pink {
+    background: #f390a8;
+  }
+
+  &.blue {
+    background: #53bfce;
   }
 }

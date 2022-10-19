@@ -1,8 +1,12 @@
+import { Emphasis } from "components/Emphasis";
+import { Button } from "components/Button";
+import { NewsList } from "components/NewsList";
+import { news } from "mock";
 import styles from "./styles.module.scss";
-import { MainNews } from "components/MainNews";
-import { News } from "components/News";
 
 export function Home() {
+  const newsShort = news.slice(0, 3);
+
   return (
     <div>
       <div className={styles.hero}>
@@ -17,46 +21,25 @@ export function Home() {
             <h3>Blog</h3>
           </header>
           <div className={styles.news}>
-            <MainNews />
+            <Emphasis />
             <div className={styles.newsList}>
               <strong className={styles.title}>Outras postagens</strong>
-              <News
-                data={{
-                  category: "customer experience",
-                  title:
-                    "Feedback de Clientes:transforme tudo em dados e obtenha melhores resultados",
-                }}
-              />
-              <News
-                data={{
-                  category: "tecnologia",
-                  title: "Chatbot cognitivo: o que é e como pode ajudar?",
-                }}
-              />
-              <News
-                data={{
-                  category: "customer experience",
-                  title:
-                    "Atendimento ao cliente: quais as expectativas de Geração Millennials",
-                }}
-              />
-              <News
-                data={{
-                  category: "customer experience",
-                  title: "Open Banking: o sucesso do sistema no Brasil",
-                }}
-              />
-              <News
-                data={{
-                  category: "customer experience",
-                  title: "Open Banking: o sucesso do sistema no Brasil",
-                }}
-              />
-
-              <button type="button" className={styles.more}>
-                Ver mais
-              </button>
+              <NewsList news={news} />
+              <Button>Ver mais</Button>
             </div>
+          </div>
+        </section>
+
+        <section className={styles.mainNews}>
+          <header className={styles.mainNewsTitle}>
+            <h3>Principais notícias</h3>
+          </header>
+          <div className={styles.wrapper}>
+            <div className={styles.mainNewsList}>
+              <NewsList variant="secundary" news={newsShort} />
+              <Button variant="white">Ver mais</Button>
+            </div>
+            <div className={styles.right}></div>
           </div>
         </section>
       </main>

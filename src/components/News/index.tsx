@@ -6,12 +6,19 @@ interface NewsProps {
     category: string;
     title: string;
   };
+  variant?: "primary" | "secundary";
 }
 
-export function News({ data }: NewsProps) {
+export function News({ data, variant = "primary" }: NewsProps) {
   return (
-    <div className={styles.container}>
-      <Category>{data.category}</Category>
+    <div
+      className={`${styles.container} ${
+        variant === "primary" ? styles.primary : styles.secundary
+      }`}
+    >
+      <Category variant={variant === "primary" ? "pink" : "blue"}>
+        {data.category}
+      </Category>
       <a href={data.title} className={styles.title}>
         {data.title}
       </a>

@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 200px;
+  padding: 0 1rem;
+  height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 2rem;
+  background: transparent;
+
+  transition: background 0.2s ease-in-out;
+
+  &.pink {
+    border: 1px solid #f390a8;
+    color: #f390a8;
+  }
+
+  &.white {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
