@@ -3,6 +3,7 @@ import { Button } from "components/Button";
 import { NewsList } from "components/NewsList";
 import { news } from "mock";
 import styles from "./styles.module.scss";
+import { NewsLetter } from "components/NewsLetter";
 
 export function Home() {
   const newsShort = news.slice(0, 3);
@@ -42,6 +43,8 @@ export function Home() {
             <div className={styles.right}></div>
           </div>
         </section>
+
+        <NewsLetter />
       </main>
     </div>
   );

@@ -1,0 +1,161 @@
+.container {
+  margin-top: 2rem;
+  background: rgb(235, 232, 232);
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+
+    transition: opacity 0.4s ease-in-out;
+    position: absolute;
+  }
+
+  &::before {
+    content: "";
+
+    width: 250px;
+    height: 50px;
+
+    background: transparent url("/images/line-red-secundary.png") no-repeat
+      center;
+    background-size: contain;
+
+    top: 20px;
+    left: -50px;
+  }
+
+  &::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: transparent url("/images/circle-yellow.png") no-repeat center;
+    background-size: contain;
+
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4rem 1rem;
+
+    &::before,
+    &::after {
+      opacity: 1;
+      visibility: visible;
+      max-height: none;
+    }
+  }
+}
+
+.title {
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  span {
+    color: var(--underline);
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 25%;
+      height: 5px;
+      border-radius: 6px;
+      background: var(--underline);
+
+      position: absolute;
+      bottom: -12px;
+      left: 15%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 620px;
+
+  @media (min-width: 1440px) {
+    max-width: 800px;
+  }
+}
+
+form .question {
+  display: block;
+  margin-bottom: 2rem;
+
+  text-align: center;
+  color: #222;
+}
+
+form button {
+  margin-top: 1.5rem;
+}
+
+.formContent .containerInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  input {
+    width: 100%;
+    padding: 0 0.8rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 0.3rem;
+    border: 1px solid #dad6d6;
+
+    outline: 2px solid transparent;
+
+    &:focus {
+      outline-color: var(--underline);
+    }
+
+    &::placeholder {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      color: #bbbbbb;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+      height: 2.7rem;
+    }
+  }
+}
+
+.formContent .accerptTerms {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+
+  display: flex;
+  gap: 0.5rem;
+  color: #222;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+}
