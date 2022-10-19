@@ -1,4 +1,4 @@
-export const news = [
+export const posts = [
   {
     id: 1,
     category: "customer experience",

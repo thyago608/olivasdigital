@@ -1,7 +1,6 @@
 .container {
   margin-top: 2rem;
   background: #f0efef;
-  border-radius: 15rem 15rem 0 0;
   padding: 1rem;
 
   display: flex;
@@ -10,6 +9,8 @@
   gap: 2rem;
 
   position: relative;
+
+  transition: border-radius 0.3s ease;
 
   &::before,
   &::after {
@@ -48,6 +49,7 @@
 
   @media (min-width: 1024px) {
     padding: 4rem 1rem;
+    border-radius: 15rem 15rem 0 0;
 
     &::before,
     &::after {
