@@ -4,7 +4,7 @@ import { PostList } from "components/PostList";
 import { posts } from "mock";
 import styles from "./styles.module.scss";
 import { NewsLetter } from "components/NewsLetter";
-import { Case } from "components/Case";
+import { Carousel } from "components/Carousel";
 
 export function Home() {
   const postsShort = posts.slice(0, 3);
@@ -46,11 +46,9 @@ export function Home() {
         <h3>Cases</h3>
       </header>
       <div className={styles.casesList}>
-        <Case />
-        <Case />
-        <Case />
-        <Case />
+        <Carousel />
       </div>
+      <Button>Ver mais</Button>
     </section>
   );
 

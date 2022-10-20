@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+}
+
+.list {
+  overflow-x: auto;
+  padding: 0 1rem;
+
+  display: flex;
+  gap: 5rem;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.arrows {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    border: none;
+    background: none;
+
+    svg {
+      color: var(--underline);
+    }
+  }
+
+  button:first-of-type img {
+    transform: rotate(90deg);
+  }
+
+  button:last-of-type img {
+    transform: rotate(-90deg);
+  }
+}
