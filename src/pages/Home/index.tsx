@@ -1,10 +1,12 @@
 import { Emphasis } from "components/Emphasis";
 import { Button } from "components/Button";
 import { PostList } from "components/PostList";
-import { posts } from "mock";
-import styles from "./styles.module.scss";
 import { NewsLetter } from "components/NewsLetter";
 import { Carousel } from "components/Carousel";
+import Slider from "react-slick";
+import { highlightsLong, posts } from "mock";
+import styles from "./styles.module.scss";
+import { HighlightsCarousel } from "components/HighlightsCarousel";
 
 export function Home() {
   const postsShort = posts.slice(0, 3);
@@ -15,7 +17,7 @@ export function Home() {
         <h3>Blog</h3>
       </header>
       <div className={styles.posts}>
-        <Emphasis />
+        <Emphasis data={highlightsLong} />
         <div className={styles.postsList}>
           <strong className={styles.title}>Outras postagens</strong>
           <PostList posts={posts} />
@@ -30,12 +32,12 @@ export function Home() {
       <header className={styles.mainNewsTitle}>
         <h3>Principais notícias</h3>
       </header>
-      <div className={styles.wrapper}>
+      <div className={styles.mainNewsGrid}>
         <div className={styles.mainNewsList}>
           <PostList variant="secundary" posts={postsShort} />
           <Button variant="white">Ver mais</Button>
         </div>
-        <div className={styles.right}></div>
+        <HighlightsCarousel />
       </div>
     </section>
   );

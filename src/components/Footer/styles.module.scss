@@ -1,5 +1,5 @@
 .container {
-  background: var(--footer);
+  background: var(--blue-900);
 }
 
 .content {
@@ -16,11 +16,11 @@
 
   a {
     font-size: 0.8rem;
-    color: #3d81db;
+    color: var(--blue-600);
     transition: color 0.3s ease;
 
     &:hover {
-      color: #fff;
+      color: var(--white);
     }
   }
 
@@ -55,7 +55,7 @@
       bottom: 3px;
       right: -10px;
 
-      background: #3d81db;
+      background: var(--blue-600);
     }
   }
 }

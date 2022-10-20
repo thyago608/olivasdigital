@@ -14,12 +14,12 @@
   transition: background 0.2s ease-in-out;
 
   &.pink {
-    border: 1px solid #f390a8;
-    color: #f390a8;
+    border: 1px solid var(--pink);
+    color: var(--pink);
   }
 
   &.white {
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid var(--white);
+    color: var(--white);
   }
 }

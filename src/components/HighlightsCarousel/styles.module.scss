@@ -1,0 +1,23 @@
+.container {
+  background: var(--white);
+  padding: 2rem 0;
+  border-radius: 6rem 0 0 0;
+  max-width: 300px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  :global(.control-dots) {
+    width: 30%;
+    top: 165px;
+
+    li[class^="dot"] {
+      background: var(--pink);
+    }
+  }
+}

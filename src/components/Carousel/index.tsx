@@ -1,6 +1,7 @@
 import { MouseEvent, useRef } from "react";
 import { CaretRight, CaretLeft } from "phosphor-react";
 import { Case } from "components/Case";
+import { cases } from "mock";
 import styles from "./styles.module.scss";
 
 export function Carousel() {
@@ -24,20 +25,9 @@ export function Carousel() {
   return (
     <div className={styles.container}>
       <div className={styles.list} ref={carouselRef}>
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
-        <Case />
+        {cases.map((item) => (
+          <Case key={item.id} data={item} />
+        ))}
       </div>
       <div className={styles.arrows}>
         <button type="button" onClick={handleLeftClick}>

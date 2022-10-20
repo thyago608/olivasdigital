@@ -1,15 +1,28 @@
 :root {
-  --title: #02374f;
-  --text-primary: #4c4c4c;
-  --text-secundary: #838383;
-  --main-news: #8ecb53;
+  --green: #8ecb53;
 
-  --underline: #3fb9ca;
+  --white: #fff;
 
-  --empty: #f8f8f8;
+  --yellow: #afa326;
 
-  --news-latter: #f0f1f5;
-  --footer: #062d76;
+  --cyan-100: #53bfce;
+  --cyan-200: #3fb9ca;
+  --cyan-900: #02374f;
+
+  --blue-600: #3d81db;
+  --blue-900: #062d76;
+
+  --gray-100: #d1d1d1;
+  --gray-600: #a7a5a5;
+  --gray-700: #838383;
+  --gray-900: #4c4c4c;
+
+  --zinc-50: #f0efef;
+  --zinc-100: #fafafa;
+  --zinc-300: #eeeeee;
+  --zinc-400: #f3f3f3;
+
+  --pink: #f390a8;
 }
 
 * {
@@ -19,7 +32,7 @@
 }
 
 body {
-  color: var(--title);
+  color: var(--cyan-900);
 }
 
 body,

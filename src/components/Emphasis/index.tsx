@@ -1,38 +1,31 @@
 import { Category } from "components/Category";
+import { IEmphasis } from "types/Emphasis";
 import styles from "./styles.module.scss";
 
-export function Emphasis() {
+interface EmphasisProps {
+  data: IEmphasis;
+  variant?: "long" | "short";
+}
+
+export function Emphasis({ data, variant = "long" }: EmphasisProps) {
   return (
-    <div className={styles.container}>
-      <img
-        src="/images/girl-coding.png"
-        alt="girl coding"
-        title="girl coding"
-      />
+    <div
+      className={`${
+        variant === "long" ? styles.containerLong : styles.containerShort
+      }`}
+    >
+      <img src={data.image} alt={data.title} title={data.title} />
       <header>
         <div className={styles.headerTop}>
-          <Category>Tecnologia</Category>
-          <time>11/11/2022</time>
+          <Category>{data.category}</Category>
+          <time>{data.published}</time>
         </div>
         <h4 className={styles.headerTitle}>
-          <a href="#">
-            Contando com a tecnologia para o treinamento de especialistas no
-            atendimento
-          </a>
+          <a href="#">{data.title}</a>
         </h4>
       </header>
       <div className={styles.content}>
-        <p>
-          Muito mais do que saber ouvir e atender as necessidades de um cliente,
-          o Customer Experiencie visa ir além e oferecer uma experiência que de
-          fato trará muito mais proximidade entre o cliente e a marca.
-        </p>
-        <p>
-          As boas práticas de um atendimento já não são o que foram há poucos
-          anos atrás, o mercado demanda por profissionais capazes de
-          proporcionar um contato transformador. Não há mais espaço para o
-          atendimento engessado.
-        </p>
+        <p>{data.text}</p>
       </div>
     </div>
   );

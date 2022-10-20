@@ -1,5 +1,5 @@
 .container {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid var(--zinc-300);
   padding: 0.5rem 0;
 
   display: flex;
@@ -7,17 +7,17 @@
   gap: 0.5rem;
 
   time {
-    color: #f390a8;
+    color: var(--pink);
     font-size: 0.9rem;
   }
 
   &.primary {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid var(--zinc-300);
   }
 
   &.secundary {
-    border-top: 1px solid #ffff;
-    color: #fff;
+    border-top: 1px solid var(--white);
+    color: var(--white);
 
     time {
       order: -1;
