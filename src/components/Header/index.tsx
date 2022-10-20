@@ -1,7 +1,14 @@
-import { Envelope, List, X, MagnifyingGlass } from "phosphor-react";
+import { useState } from "react";
+import {
+  Envelope,
+  List,
+  X,
+  MagnifyingGlass,
+  GlobeHemisphereWest,
+  CaretDown,
+} from "phosphor-react";
 import { ButtonFilled } from "components/ButtonFilled";
 import styles from "./styles.module.scss";
-import { useRef, useState } from "react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +19,11 @@ export function Header() {
 
   return (
     <header className={styles.container}>
+      <div className={styles.language}>
+        <GlobeHemisphereWest size={15} />
+        Português
+        <CaretDown size={15} />
+      </div>
       <div className={styles.content}>
         <a className={styles.logo}>
           <span>Olivas Digital</span>
@@ -46,11 +58,11 @@ export function Header() {
           </ul>
           <div className={styles.moreOptions}>
             <ButtonFilled>
-              <Envelope size={25} />
+              <Envelope size={20} />
               Fale com especialista
             </ButtonFilled>
             <button type="button">
-              <MagnifyingGlass size={25} />
+              <MagnifyingGlass size={20} weight="bold" />
             </button>
           </div>
         </nav>

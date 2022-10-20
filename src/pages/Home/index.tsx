@@ -3,10 +3,9 @@ import { Button } from "components/Button";
 import { PostList } from "components/PostList";
 import { NewsLetter } from "components/NewsLetter";
 import { Carousel } from "components/Carousel";
-import Slider from "react-slick";
 import { highlightsLong, posts } from "mock";
-import styles from "./styles.module.scss";
 import { HighlightsCarousel } from "components/HighlightsCarousel";
+import styles from "./styles.module.scss";
 
 export function Home() {
   const postsShort = posts.slice(0, 3);
